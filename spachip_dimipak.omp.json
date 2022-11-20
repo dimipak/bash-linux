@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "lightYellow",
+          "style": "plain",
+          "template": "<#e5c07b>\u250f</> {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "cyan",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "<#ffffff>at</> {{ .HostName }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#ff94df",
+          "properties": {
+            "branch_icon": " <#ff94df><b>\ue0a0 </b></>",
+            "fetch_stash_count": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>on</> {{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#7eb8da",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#e5c07b>\u2516</> <#ffffff>in</> <#98bfad>{{ .Path }}</>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#272727",
+          "foreground": "#43CCEA",
+          "properties": {
+            "time_format": "3:04:05 PM"
+          },
+          "style": "diamond",
+          "template": "<#000000> \ue31e\uf0fb </>{{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0c5",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "lightGreen",
+          "style": "plain",
+          "template": "\u276f",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
