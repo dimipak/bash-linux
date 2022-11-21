@@ -14,7 +14,7 @@ echo 'eval "$(oh-my-posh init bash)"' >> ~/.bashrc
 mkdir ~/.poshcustomthemes
 
 # Get theme to a custom theme folder
-sudo wget  https://raw.githubusercontent.com/dimipak/bash-linux/main/spaceship_dimipak.omp.omp.json -O ~/.poshcustomthemes/dimipak.omp.json
+sudo wget https://raw.githubusercontent.com/dimipak/bash-linux/main/spaceship_dimipak.omp.json -O ~/.poshcustomthemes/dimipak.omp.json
 
 # Add theme to bashrc file
 echo "POSH_THEME='~/.poshcustomthemes/dimipak.omp.json'" >> ~/.bashrc
