@@ -8,13 +8,16 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 oh-my-posh font install JetBrainsMono
 
 # Append to bashrc users file the oh-my-posh bash init command
-echo "eval \"$(oh-my-posh init bash)\"" >> ~/.bashrc
+echo 'eval "$(oh-my-posh init bash)"' >> ~/.bashrc
 
 # Create custom theme folder
 mkdir ~/.poshcustomthemes
 
 # Get theme to a custom theme folder
-sudo wget https://github.com/dimipak/bash-linux/spaceship_dimipak.omp.json -O ~/.poshcustomthemes/dimipak.omp.json
+sudo wget  https://raw.githubusercontent.com/dimipak/bash-linux/main/spaceship_dimipak.omp.omp.json -O ~/.poshcustomthemes/dimipak.omp.json
 
 # Add theme to bashrc file
-echo "POSH_THEME='~/spaceship_dimipak.omp.json'" >> ~/.bashrc
+echo "POSH_THEME='~/.poshcustomthemes/dimipak.omp.json'" >> ~/.bashrc
+
+# Reload bashrc
+source ~/.bashrc
